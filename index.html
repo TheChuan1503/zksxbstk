@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>中考数学必刷题库</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(function() {
+            window.location.replace("md.html")
+        }, 1000)
+
+        function v() {
+            var userAgent = navigator.userAgent;
+            var match = userAgent.match(/Chrome\/([\d.]+)/);
+
+            if (match) {
+                // 返回Chrome内核版本号
+                return parseInt(match[1]);
+            } else {
+                // 如果没有找到匹配项，可能不是基于Chrome内核的浏览器
+                return "Not a Chrome-based browser.";
+            }
+        }
+        if (v() >= 86) {
+            window.location.replace("md2.html")
+        } else window.location.replace("md.html")
+    </script>
+</body>
+
+</html>

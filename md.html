@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="css/md.css">
+    <link href="css/icon.css" rel="stylesheet">
+    <title>中考数学必刷题库</title>
+    <style>
+        [main] {
+            margin: auto;
+            margin-top: 64px;
+            text-align: center;
+        }
+
+        [tt] {
+            font-size: 96px;
+        }
+
+        .mdui-textfield {
+            width: 80%;
+            margin: auto;
+        }
+
+        span {
+            font-size: 18px;
+        }
+
+        *,
+        :root,
+        [main],
+        h1,
+        h2 {
+            user-select: none;
+        }
+
+        .mdui-textfield {
+            text-align: left;
+        }
+
+        a {
+            user-select: text;
+            ()
+        }
+    </style>
+</head>
+
+<body>
+    <div main>
+        <h1>中考数学必刷题库</h1> <span>少壮不努力，老大徒伤悲</span> <br><br><br>
+        <h2>5 + 4 = ?</h2>
+        <div class="mdui-textfield mdui-textfield-floating-label">
+            <label class="mdui-textfield-label">在此输入答案</label> <input class="mdui-textfield-input" id="inp" type="number">
+        </div> <br><br> <button onclick="r(inp.value)" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink" style="width:256px;">确定</button>
+        <h1 tt onclick="gh()">🤔</h1>
+    </div>
+    <script src="js/md.js"></script>
+    <script>
+        function r(str) {
+            n = parseFloat(str)
+            if (n == 9) {
+                const music = new Audio('audio/success.mp3');
+                music.play();
+            } else {
+                const music = new Audio('audio/faild.mp3');
+                music.play();
+            }
+        }
+
+        function gh() {
+            mdui.alert("根据 MIT 的协议<br>在 GITHUB 上查看我们的源代码<br><a>github.com/TheChuan1503/zksxbstk</a>", "关于")
+        }
+    </script>
+</body>
+
+</html>

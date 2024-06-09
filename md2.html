@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="css/md2.css">
+    <script src="js/md2.js"></script>
+    <link href="css/icon.css" rel="stylesheet">
+    <title>中考数学必刷题库</title>
+    <style>
+        [main] {
+            margin: auto;
+            -width: fit-content;
+            margin-top: 64px;
+            text-align: center;
+        }
+
+        [tt] {
+            font-size: 96px;
+        }
+
+        [input] {
+            width: 80%;
+        }
+
+        span {
+            font-size: 22px;
+            display: block;
+        }
+
+        p,
+        a {
+            font-size: 14px;
+        }
+
+        *,
+        :root,
+        [main],
+        h1,
+        h2 {
+            user-select: none;
+        }
+
+        a {
+            user-select: text;
+        }
+    </style>
+</head>
+
+<body>
+    <div main>
+        <h1>中考数学必刷题库</h1>
+        <span>少壮不努力，老大徒伤悲</span>
+        <br><br><br>
+        <h2>5 + 4 = ?</h2>
+        <mdui-text-field id="inp" input variant="outlined" label="在此输入答案" type="number"></mdui-text-field>
+        <br><br>
+        <mdui-button onclick="r(inp.value)" style="width:256px">确定</mdui-button>
+        <h1 tt onclick="about.open=true">🤔</h1>
+    </div>
+    <mdui-dialog close-on-overlay-click id="about" style="text-align:center;">
+        <span gy>关于</span>
+        <p>根据 MIT 协议<br>
+            在 GITHUB 上查看我们的源代码<br>
+            <a>github.com/TheChuan1503/zksxbstk</a>
+        </p>
+    </mdui-dialog>
+    <script>
+        function r(str) {
+            n = parseFloat(str)
+            if (n == 9) {
+                const music = new Audio('audio/success.mp3');
+                music.play();
+            } else {
+                const music = new Audio('audio/faild.mp3');
+                music.play();
+            }
+        }
+
+        function gh() {
+            mdui.dialog({
+                headline: "",
+                description: "根据 MIT 的协议\r\n在 GITHUB 上查看我们的源代码\ngithub.com/TheChuan1503/zksxbstk",
+                actions: [{
+                        text: "Cancel",
+                    },
+                    {
+                        text: "OK",
+                        onClick: () => {
+                            console.log("confirmed");
+                            return false;
+                        },
+                    }
+                ]
+            });
+        }
+    </script>
+</body>
+
+</html>
